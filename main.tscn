@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=3 uid="uid://c5ao077k5j6ca"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_silji"]
+[ext_resource type="FontFile" uid="uid://covlv4vi66dix" path="res://open_dyslexic/OpenDyslexic-Bold.otf" id="2_1bopc"]
+[ext_resource type="FontFile" uid="uid://kn8k4jvw3bgs" path="res://open_dyslexic/OpenDyslexicAlta-Bold.otf" id="2_voma0"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_silji")
+
+[node name="Play" type="Button" parent="."]
+offset_left = 431.0
+offset_top = 298.0
+offset_right = 704.0
+offset_bottom = 391.0
+theme_override_fonts/font = ExtResource("2_1bopc")
+theme_override_font_sizes/font_size = 30
+text = "Play"
+
+[node name="Quit" type="Button" parent="."]
+offset_left = 432.0
+offset_top = 455.0
+offset_right = 705.0
+offset_bottom = 551.0
+theme_override_fonts/font = ExtResource("2_1bopc")
+theme_override_font_sizes/font_size = 30
+text = "Quit"
+
+[node name="Title" type="RichTextLabel" parent="."]
+offset_left = 208.0
+offset_top = 59.0
+offset_right = 985.0
+offset_bottom = 225.0
+theme_override_fonts/normal_font = ExtResource("2_voma0")
+theme_override_font_sizes/normal_font_size = 90
+text = "Drag and Drop"
+
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
